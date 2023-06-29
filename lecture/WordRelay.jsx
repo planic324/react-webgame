@@ -3,11 +3,40 @@ const { Component } = React;
 
 class WordRelay extends Component {
     state = {
-        text: 'hello. webpack',
+        word: '노은찬',
+        value: '',
+        result: '',
     };
 
+    onSubmitForm = () => {
+        e.preventDefault();
+    }
+
+    onChangeInput = () => {
+
+    }
+
+    input;
+
+    onRefInput = () => {
+        this.input = c;
+    }
+
     render () {
-        return <h1>{this.state.text}</h1>
+        return (
+            <>
+                <div>{this.state.word}</div>
+                <form onSubmit={this.onSubmitForm}>
+                    <input 
+                        ref={this.onRefInput}
+                        value={this.state.value}
+                        onChange={this.onChangeInput}
+                    />
+                    <button>입력</button>
+                </form>
+                <div>{this.state.result}</div>
+            </>
+        )
     };
 };
 
