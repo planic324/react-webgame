@@ -10,10 +10,11 @@ class WordRelay extends Component {
 
     onSubmitForm = () => {
         e.preventDefault();
+        if (this.state.word)
     }
 
     onChangeInput = () => {
-
+        this.setState({ value: e.target.value})
     }
 
     input;
